@@ -41,12 +41,14 @@ const displayDetails = (pet) => {
 }
 
 const handleComment = (event) => {
+    event.preventDefault();
     const userId = localStorage.getItem('userId');
     if(!userId)
     {
         alert('login first');
+        window.location.href = '../login.html'
+        return;
     }
-    event.preventDefault();
     const token = localStorage.getItem('token');
     const petId = new URLSearchParams(window.location.search).get("petId")
     const review_text = document.getElementById('review-text').value;
@@ -70,12 +72,11 @@ const handleComment = (event) => {
     })
     .then(res => res.json())
     .then(data => {
-        if (data.error) {
-            
-            alert(data.error);
-            return;
-        }
-        alert('Review Submitted Successfully')
+        
+            console.log(data)
+            alert('Review Submitted Successfully');
+            document.getElementById('my_modal_5').close();
+        
     })
     
 }

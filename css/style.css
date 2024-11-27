@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(226, 227, 236);
+}
+.primary{
+    color:#21286D;
+}
+.gray{
+    color:#48505F;
+}
+.secondary{
+    color:#313131;
+}
+.toast {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .toast.visible {
+    visibility: visible;
+    opacity: 1;
+  }

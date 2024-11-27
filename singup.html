@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Register</title>
+</head>
+
+<body>
+    <main>
+        <div
+            class="flex items-center justify-center h-screen bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
+            <div class="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-center text-gray-700">Sign Up</h2>
+                <form class="mt-4 space-y-4" onsubmit="onclick=handleRegistration(event)">
+                    <p id="error"></p>
+                    <div>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required
+                            class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                    <div><input
+                            class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
+                            type="text" name="first_name" id="first_name" placeholder="First Name" required> </div>
+                    <div> <input
+                            class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
+                            type="text" name="last_name" id="last_name" placeholder="Last Name" required> </div>
+                    <div><input
+                            class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none"
+                            type="email" name="email" id="email" placeholder="Email" required> </div>
+                    <div>
+
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required
+                            class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+                    <div>
+
+                            
+                        <input type="password" id="confirm_password" name="confirm_password"
+                            placeholder="Confirm your password" required
+                            class="w-full px-4 py-2 mt-1 border rounded-lg focus:ring-blue-500 focus:border-blue-500 focus:outline-none" />
+                    </div>
+
+
+                    <button type="submit"
+                        class="w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
+                        Register
+                    </button>
+                    <p class="secondary">Already Register ? <a class="primary underline"  href="./login.html">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- <script src="./js/index.js"></script> -->
+    <script src="./js/auth.js"></script>
+</body>
+
+</html>
